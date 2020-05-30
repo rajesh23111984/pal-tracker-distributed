@@ -1,12 +1,12 @@
 applications:
-  - name: tracker-timesheet
-    path: ./applications/timesheet-server/build/libs/backlog-server.jar
+  - name: tracker-timesheets
+    path: ./applications/timesheets-server/build/libs/backlog-server.jar
     routes:
-      - route: timesheet-pal-rajesh-kumar.cfapps.io
+      - route: timesheets-pal-rajesh-kumar.cfapps.io
     memory: 1G
     instances: 1
     env:
       REGISTRATION_SERVER_ENDPOINT: http://registration-pal-rajesh-kumar.cfapps.io
       JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
     services:
-      - tracker-backlog-database
+      - tracker-timesheets-database
