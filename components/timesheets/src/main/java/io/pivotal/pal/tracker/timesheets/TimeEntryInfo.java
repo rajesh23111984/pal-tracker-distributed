@@ -12,7 +12,7 @@ public class TimeEntryInfo {
         this(timeEntryInfoBuilder());
     }
 
-    private TimeEntryInfo(Builder builder) {
+    TimeEntryInfo(Builder builder) {
         id = builder.id;
         projectId = builder.projectId;
         userId = builder.userId;
