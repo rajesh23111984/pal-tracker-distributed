@@ -12,7 +12,7 @@ public class TimeEntryInfo {
         this(timeEntryInfoBuilder());
     }
 
-    TimeEntryInfo(Builder builder) {
+    private TimeEntryInfo(Builder builder) {
         id = builder.id;
         projectId = builder.projectId;
         userId = builder.userId;
@@ -98,12 +98,12 @@ public class TimeEntryInfo {
     @Override
     public String toString() {
         return "TimeEntryInfo{" +
-            "id=" + id +
-            ", projectId=" + projectId +
-            ", userId=" + userId +
-            ", date=" + date +
-            ", hours=" + hours +
-            ", info='" + info + '\'' +
-            '}';
+                "id=" + id +
+                ", projectId=" + projectId +
+                ", userId=" + userId +
+                ", date=" + date +
+                ", hours=" + hours +
+                ", info='" + info + '\'' +
+                '}';
     }
 }
