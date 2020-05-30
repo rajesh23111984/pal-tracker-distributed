@@ -1,8 +1,8 @@
 applications:
-  - name: tracker-backlog
-    path: ./applications/backlog-server/build/libs/backlog-server.jar
+  - name: tracker-timesheet
+    path: ./applications/timesheet-server/build/libs/backlog-server.jar
     routes:
-      - route: backlog-pal-rajesh-kumar.cfapps.io
+      - route: timesheet-pal-rajesh-kumar.cfapps.io
     memory: 1G
     instances: 1
     env:
