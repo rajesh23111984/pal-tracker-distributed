@@ -1,3 +1,4 @@
+/*
 package io.pivotal.pal.tracker.allocations;
 
 import io.pivotal.pal.tracker.allocations.data.AllocationDataGateway;
@@ -35,11 +36,13 @@ public class AllocationController {
 
         AllocationRecord recordLocal = new AllocationRecord(builder);
         return new ResponseEntity<>(present(recordLocal), HttpStatus.CREATED);
-       /* if (projectIsActive(form.projectId)) {
+       */
+/* if (projectIsActive(form.projectId)) {
             AllocationRecord record = gateway.create(formToFields(form));
             return new ResponseEntity<>(present(record), HttpStatus.CREATED);
         }
-        return new ResponseEntity<>(HttpStatus.SERVICE_UNAVAILABLE);*/
+        return new ResponseEntity<>(HttpStatus.SERVICE_UNAVAILABLE);*//*
+
     }
 
     @GetMapping
@@ -71,9 +74,9 @@ public class AllocationController {
                 .id(record.id)
                 .projectId(record.projectId)
                 .userId(record.userId)
-                //.firstDay(record.firstDay.toString())
-                //.lastDay(record.lastDay.toString())
+                .firstDay(record.firstDay.toString())
+                .lastDay(record.lastDay.toString())
                 .info("allocation info")
                 .build();
     }
-}
+}*/
