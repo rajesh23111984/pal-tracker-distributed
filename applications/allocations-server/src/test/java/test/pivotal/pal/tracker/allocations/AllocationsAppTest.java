@@ -1,4 +1,5 @@
-/*package test.pivotal.pal.tracker.allocations;
+/*
+package test.pivotal.pal.tracker.allocations;
 
 import io.pivotal.pal.tracker.allocations.App;
 import org.junit.Test;
@@ -16,4 +17,5 @@ public class AllocationsAppTest {
 
         assertThat(response).isEqualTo("[]");
     }
-}*/
+}
+*/
