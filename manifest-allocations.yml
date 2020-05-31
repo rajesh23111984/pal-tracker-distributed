@@ -4,7 +4,7 @@ applications:
     path: ./applications/allocations-server/build/libs/allocations-server.jar
     routes:
       - route: allocations-pal-rajesh-kumar.cfapps.io
-    memory: 1G
+    memory: 2G
     instances: 1
     env:
       #REGISTRATION_SERVER_ENDPOINT: http://registration-pal-rajesh-kumar.cfapps.io
