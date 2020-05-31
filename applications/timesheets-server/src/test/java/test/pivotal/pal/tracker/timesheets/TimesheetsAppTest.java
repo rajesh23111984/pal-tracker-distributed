@@ -1,4 +1,3 @@
-/*
 package test.pivotal.pal.tracker.timesheets;
 
 import io.pivotal.pal.tracker.timesheets.App;
@@ -18,4 +17,3 @@ public class TimesheetsAppTest {
         assertThat(response).isEqualTo("[]");
     }
 }
-*/

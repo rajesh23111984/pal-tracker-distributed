@@ -1,9 +1,21 @@
 package test.pivotal.pal.tracker.allocations;
 
 import io.pivotal.pal.tracker.allocations.data.AllocationDataGateway;
+import io.pivotal.pal.tracker.allocations.data.AllocationFields;
+import io.pivotal.pal.tracker.allocations.data.AllocationRecord;
 import io.pivotal.pal.tracker.testsupport.TestScenarioSupport;
 import org.junit.Before;
+import org.junit.Test;
 import org.springframework.jdbc.core.JdbcTemplate;
+
+import java.sql.Timestamp;
+import java.time.LocalDate;
+import java.util.List;
+import java.util.Map;
+
+import static io.pivotal.pal.tracker.allocations.data.AllocationFields.allocationFieldsBuilder;
+import static io.pivotal.pal.tracker.allocations.data.AllocationRecord.allocationRecordBuilder;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class AllocationDataGatewayTest {
 
@@ -16,14 +28,14 @@ public class AllocationDataGatewayTest {
         template.execute("delete from allocations;");
     }
 
-    /*@Test
+    @Test
     public void testCreate() {
         AllocationFields fields = allocationFieldsBuilder()
-            .projectId(22L)
-            .userId(12L)
-            .firstDay(LocalDate.parse("2016-01-13"))
-            .lastDay(LocalDate.parse("2016-09-17"))
-            .build();
+                .projectId(22L)
+                .userId(12L)
+                .firstDay(LocalDate.parse("2016-01-13"))
+                .lastDay(LocalDate.parse("2016-09-17"))
+                .build();
 
 
         AllocationRecord created = gateway.create(fields);
@@ -52,11 +64,11 @@ public class AllocationDataGatewayTest {
 
 
         assertThat(result).containsExactly(allocationRecordBuilder()
-            .id(97336L)
-            .projectId(22L)
-            .userId(12L)
-            .firstDay(LocalDate.parse("2016-01-13"))
-            .lastDay(LocalDate.parse("2016-09-17"))
-            .build());
-    }*/
+                .id(97336L)
+                .projectId(22L)
+                .userId(12L)
+                .firstDay(LocalDate.parse("2016-01-13"))
+                .lastDay(LocalDate.parse("2016-09-17"))
+                .build());
+    }
 }

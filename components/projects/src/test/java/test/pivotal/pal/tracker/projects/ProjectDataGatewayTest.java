@@ -1,9 +1,19 @@
 package test.pivotal.pal.tracker.projects;
 
 import io.pivotal.pal.tracker.projects.data.ProjectDataGateway;
+import io.pivotal.pal.tracker.projects.data.ProjectFields;
+import io.pivotal.pal.tracker.projects.data.ProjectRecord;
 import io.pivotal.pal.tracker.testsupport.TestScenarioSupport;
 import org.junit.Before;
+import org.junit.Test;
 import org.springframework.jdbc.core.JdbcTemplate;
+
+import java.util.List;
+import java.util.Map;
+
+import static io.pivotal.pal.tracker.projects.data.ProjectFields.projectFieldsBuilder;
+import static io.pivotal.pal.tracker.projects.data.ProjectRecord.projectRecordBuilder;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class ProjectDataGatewayTest {
 
@@ -18,7 +28,7 @@ public class ProjectDataGatewayTest {
         template.execute("DELETE FROM users;");
     }
 
-    /*@Test
+    @Test
     public void testCreate() {
         template.execute("insert into users (id, name) values (12, 'Jack')");
         template.execute("insert into accounts (id, owner_id, name) values (1, 12, 'anAccount')");
@@ -48,7 +58,7 @@ public class ProjectDataGatewayTest {
 
 
         assertThat(result).containsExactlyInAnyOrder(
-            projectRecordBuilder().id(22L).accountId(1L).name("aProject").active(true).build()
+                projectRecordBuilder().id(22L).accountId(1L).name("aProject").active(true).build()
         );
     }
 
@@ -63,7 +73,7 @@ public class ProjectDataGatewayTest {
 
 
         assertThat(foundRecord).isEqualTo(
-            projectRecordBuilder().id(22L).accountId(1L).name("aProject").active(true).build()
+                projectRecordBuilder().id(22L).accountId(1L).name("aProject").active(true).build()
         );
-    }*/
+    }
 }
