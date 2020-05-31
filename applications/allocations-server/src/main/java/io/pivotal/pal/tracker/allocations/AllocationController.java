@@ -71,7 +71,7 @@ public class AllocationController {
                 .id(record.id)
                 .projectId(record.projectId)
                 .userId(record.userId)
-                .firstDay(record.firstDay.toString())
+                //.firstDay(record.firstDay.toString())
                 .lastDay(record.lastDay.toString())
                 .info("allocation info")
                 .build();
