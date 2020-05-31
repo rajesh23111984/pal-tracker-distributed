@@ -9,6 +9,12 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class RestConfig {
 
+//    @Bean
+//    @LoadBalanced
+//    public RestOperations restOperations() {
+//        return new RestTemplate();
+//    }
+
     @Bean
     public ObjectMapper objectMapper() {
         ObjectMapper mapper = new ObjectMapper();

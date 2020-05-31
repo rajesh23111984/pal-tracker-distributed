@@ -3,10 +3,10 @@ applications:
     path: ./applications/timesheets-server/build/libs/timesheets-server.jar
     routes:
       - route: timesheets-pal-rajesh-kumar.cfapps.io
-    memory: 2G
+    memory: 1G
     instances: 1
     env:
-      #REGISTRATION_SERVER_ENDPOINT: https://registration-pal-rajesh-kumar.cfapps.io
+      #REGISTRATION_SERVER_ENDPOINT: http://registration-pal-rajesh-kumar.cfapps.io
       JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
       GRANT_TYPE: client_credentials
     services:
