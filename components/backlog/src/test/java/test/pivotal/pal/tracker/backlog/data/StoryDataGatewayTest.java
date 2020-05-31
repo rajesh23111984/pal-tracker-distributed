@@ -1,19 +1,9 @@
 package test.pivotal.pal.tracker.backlog.data;
 
 import io.pivotal.pal.tracker.backlog.data.StoryDataGateway;
-import io.pivotal.pal.tracker.backlog.data.StoryFields;
-import io.pivotal.pal.tracker.backlog.data.StoryRecord;
 import io.pivotal.pal.tracker.testsupport.TestScenarioSupport;
 import org.junit.Before;
-import org.junit.Test;
 import org.springframework.jdbc.core.JdbcTemplate;
-
-import java.util.List;
-import java.util.Map;
-
-import static io.pivotal.pal.tracker.backlog.data.StoryFields.storyFieldsBuilder;
-import static io.pivotal.pal.tracker.backlog.data.StoryRecord.storyRecordBuilder;
-import static org.assertj.core.api.Assertions.assertThat;
 
 public class StoryDataGatewayTest {
 
@@ -26,7 +16,7 @@ public class StoryDataGatewayTest {
         template.execute("DELETE FROM stories;");
     }
 
-    @Test
+    /*@Test
     public void testCreate() {
         StoryFields fields = storyFieldsBuilder()
             .projectId(22L)
@@ -62,5 +52,5 @@ public class StoryDataGatewayTest {
                 .name("aStory")
                 .build()
         );
-    }
+    }*/
 }

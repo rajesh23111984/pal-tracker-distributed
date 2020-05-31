@@ -2,20 +2,8 @@ package test.pivotal.pal.tracker.timesheets;
 
 import io.pivotal.pal.tracker.testsupport.TestScenarioSupport;
 import io.pivotal.pal.tracker.timesheets.data.TimeEntryDataGateway;
-import io.pivotal.pal.tracker.timesheets.data.TimeEntryFields;
-import io.pivotal.pal.tracker.timesheets.data.TimeEntryRecord;
 import org.junit.Before;
-import org.junit.Test;
 import org.springframework.jdbc.core.JdbcTemplate;
-
-import java.sql.Timestamp;
-import java.time.LocalDate;
-import java.util.List;
-import java.util.Map;
-
-import static io.pivotal.pal.tracker.timesheets.data.TimeEntryFields.timeEntryFieldsBuilder;
-import static io.pivotal.pal.tracker.timesheets.data.TimeEntryRecord.timeEntryRecordBuilder;
-import static org.assertj.core.api.Assertions.assertThat;
 
 public class TimeEntryDataGatewayTest {
 
@@ -29,7 +17,7 @@ public class TimeEntryDataGatewayTest {
         template.execute("DELETE FROM time_entries;");
     }
 
-    @Test
+    /*@Test
     public void testCreate() {
         TimeEntryFields fields = timeEntryFieldsBuilder()
             .projectId(22L)
@@ -71,5 +59,5 @@ public class TimeEntryDataGatewayTest {
                 .hours(8)
                 .build()
         );
-    }
+    }*/
 }
